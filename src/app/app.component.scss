@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.todo_container {
+  width: 50%;
+  min-height: 500px;
+  margin: 5% 25% 5% 25%;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+
+  h1 {
+   margin: 20px 0 5px 0;
+  }
+}
+
+.todo_add_task_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  input {
+    margin: 10px 10px 5px 10px;
+    height: 20px;
+    width: 60%;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  button {
+    width: 50%;
+    background-color: crimson;
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin: 2px;
+    font-family: 'Dosis', sans-serif;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.todo_list_container {
+  width: 400px;
+  padding: 30px 10px 30px 10px;
+  box-sizing: border-box;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    button {
+      background-color: whitesmoke;
+      border-radius: 2px;
+      color: dimgray;
+      padding: 5px;
+      border: none;
+      outline: none;
+      margin: 2px;
+      font-family: 'Dosis', sans-serif;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+    }
+
+    .delete {
+      margin-left: 20px;
+    }
+  }
+
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin-bottom: 40px;
+  padding: 0;
+  -webkit-padding-start: 0;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.remove {
+  width: 45%;
+  padding: 10px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  background-color: cadetblue;
+  transition: 0.1s ease-out;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.done {
+  font-weight: bold;
+  color: greenyellow;
+}
