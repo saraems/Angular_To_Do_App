@@ -6,6 +6,7 @@
 body {
   height: 100vh;
   width: 100vw;
+  background-color: whitesmoke;
 }
 
 .todo_container {
@@ -36,7 +37,7 @@ body {
 
   input {
     margin: 10px 10px 5px 10px;
-    height: 20px;
+    height: 30px;
     width: 60%;
     text-align: center;
     font-size: 15px;
@@ -73,7 +74,7 @@ body {
     margin-bottom: 10px;
 
     button {
-      background-color: whitesmoke;
+      background-color: lightgray;
       border-radius: 2px;
       color: dimgray;
       padding: 5px;

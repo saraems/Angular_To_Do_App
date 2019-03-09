@@ -9,7 +9,14 @@
   </div>
    <div class="todo_list_container">
      <ul>
-       <li  *ngFor="let task of tasks"> {{task.id}}. {{ task.title }}
+       <li  *ngFor="let task of tasks">
+         <div *ngIf="!task.completed; then NotCompleted else Completed"></div>
+         <ng-template #NotCompleted>
+           <p>{{task.id}}. {{ task.title }}</p>
+         </ng-template>
+         <ng-template #Completed>
+           <p class="done">{{task.id}}. {{ task.title }}</p>
+         </ng-template>
            <button (click)="deleteTask(task.id)" class="delete">Delete</button>
            <button (click)="doneTask(task, $event)">Completed</button>
        </li>
